@@ -1,0 +1,63 @@
+nav:
+  Home: /
+  Archive: /archives/
+  Category: /categories/
+  About: /about/
+
+
+projects_url: http://github.com/probberechts
+
+customize:
+    gravatar:
+        email: 
+    logo:
+        enabled: true
+        width: 50
+        height: 50
+        url: /images/globe.png
+        gravatar: false 
+    favicon: 
+      # eg. generate with http://realfavicongenerator.net/
+      desktop:
+        url: /images/globe.ico
+        gravatar: false
+      android:
+        url: /images/favicon-192x192.png
+        gravator: false
+      apple:
+        url: /images/apple-touch-icon.png
+        gravator: false
+    social_links:
+        github:
+        twitter: https://twitter.com/Johnstedt
+        youtube: https://www.youtube.com/channel/UCNHJK0z7Ru9kYsOcXDCzDTA
+        linkedin: /
+    post_count: 5
+    highlight: rainbow
+
+# RSS
+rss: false
+
+# Plugins
+plugins:
+    disqus_shortname: # Disqus Comments Shortname
+    google_analytics: UA-86660611-1 # enter the tracking ID for your Google Analytics
+
+# Miscellaneous
+miscellaneous:
+    open_graph: # see http://ogp.me
+        fb_app_id:
+        fb_admins:
+        twitter_id:
+        google_plus:
+
+
+
+# Sidebar
+sidebar: right
+widgets:
+- social
+- category
+- tag
+- tagcloud
+- archive
