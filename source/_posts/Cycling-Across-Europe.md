@@ -18,9 +18,9 @@ I've been asked that too many times.\\
 I don't really have an answer either, it certainly an act of desperation, not finding satisfaction in a sedentary lifestyle. The boredom. . To cycle away from Huddinge, Stockholm is however the best decision I've ever made. The wonderful people, the amazing places. \\ \\
 This is an account of the trip I did the summer of 2016, cycling past ten countries to reach my end destination, The Colosseum in Rome.
 
-{% blockquote David Levithan, Wide Awake %}
- Hello It's Me
- I think
+{% blockquote Helen Keller%}
+ Life is either a daring adventure or nothing at all
+ 
 {% endblockquote %}
 
 

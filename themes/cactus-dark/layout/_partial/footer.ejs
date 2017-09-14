@@ -1,7 +1,24 @@
+
+<center style="color: white;"><section id="about">
+  <% if (config.description) { %>
+    <%- markdown(config.description) %>
+  <% } %>
+  <p style="display: inline">
+    <% if (theme.customize.social_links) { %>
+      <ul id="sociallinks">
+        <% for(var i in theme.customize.social_links) { %>
+          <li><a class="icon" target="_blank" href="<%- url_for(theme.customize.social_links[i]) %>" title="<%= i %>"><i style="color:white;" class="fa fa-<%= i %>"></i></a></li>
+        <% } %>
+      </ul>.
+    <% } %>
+  </p>
+</section></center>
+
 <footer id="footer">
   <div class="footer-left">
     Copyright &copy; <%= new Date().getFullYear() %> <%= config.author || config.title %>
   </div>
+
   <div class="footer-right">
     <nav>
       <ul>
@@ -12,3 +29,4 @@
     </nav>
   </div>
 </footer>
+

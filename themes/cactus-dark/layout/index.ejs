@@ -14,12 +14,14 @@
 </head>
 <body>
 
-<div id="sliderFrame">
+<!--div id="sliderFrame">
     <div id="slider" >
         <a href="2017/02/18/Cycling-Across-Europe/">
-            <img src="images/Europa2016 522.JPG" alt="Cycling Across Europe 2016" style="height: 300px; " />
+            <img src="images/Europa2016 522.JPG" alt="Cycling Across Europe 2016" style="position: static;width: auto; height: auto;" />
         </a>
-        <a class="lazyImage" href="images/image-slider-2.jpg" title="Customizable Transition Effects">Customizable Transition Effects</a>
+        <a href="2017/02/18/Cycling-Across-Europe/" title="Tremory">
+          <img src="images/Tremory-01.png" alt="Cycling Across Europe 2016" style="height: 300px; " />
+        </a>
         <a href="http://www.menucool.com/javascript-image-slider">
             <b data-src="images/image-slider-3.jpg" data-alt="#htmlcaption3">Image Slider</b>
         </a>
@@ -38,37 +40,34 @@
     </div>
 
     <!--thumbnails-->
-    <div id="thumbs">
+    <!--div id="thumbs">
         <div class="thumb"><img src="images/Europa2016 522.JPG" /></div>
-        <div class="thumb"><img src="images/thumb2.jpg" /></div>
+        <div class="thumb"><img src="images/Tremory-01.png" /></div>
         <div class="thumb"><img src="images/thumb3.jpg" /></div>
-        <div class="thumb"><img src="images/thumb4.jpg" /></div>
+        <!--div class="thumb"><img src="images/thumb4.jpg" /></div>
         <div class="thumb"><img src="images/thumb5.jpg" /></div>
-        <div class="thumb"><img src="images/thumb1.jpg" /></div>
+        <div class="thumb"><img src="images/thumb1.jpg" /></div-->
 
 
-    </div>
+    <!--/div>
+</div-->
+
+
+<div style="float: left;">
+<img src="images/profil.jpg"  style="float: left; width: 200px; margin: 5px;" />
+Hi, I'm John-john Markstedt. Over the last few years I've come to wear many hats<br><br>
+  Primarily I'm a Software Engineer currently persuing an M.Sc in CS and developing my image storage platform <a href="https://Tremory.com">Tremory.com</a>
+  <br><br>
+    I've done a couple of longer cycling touring trips, cycling the 1405km between Milano - Barcelona in 2015 and across Europe, Stockholm - Rome in 2016.
+    <br><br>
+     Alot of time is also spent in the Financial sector. Both for personal gain but mostly because if you want to make the world a better place this is the sector that leaves the largest impact. 
+    <br><br>
+    The purpose of this website to hold all my tinkerings and resources together along with whatever I happen to write.
+
 </div>
-
-
-<section id="about">
-  <% if (config.description) { %>
-    <%- markdown(config.description) %>
-  <% } %>
-  <p style="display: inline">
-    <% if (theme.customize.social_links) { %>
-      Find me on
-      <ul id="sociallinks">
-        <% for(var i in theme.customize.social_links) { %>
-          <li><a class="icon" target="_blank" href="<%- url_for(theme.customize.social_links[i]) %>" title="<%= i %>"><i class="fa fa-<%= i %>"></i></a></li>
-        <% } %>
-      </ul>.
-    <% } %>
-  </p>
-</section>
-
+<div style=" left: 400px">
 <section id="writing">
-  <span class="h1"><a href="<%- url_for("archives") %>">Writing</a></span>
+  <span class="h1"><a href="<%- url_for("archives") %>">Posts</a></span>
   <ul class="post-list">
     <% site.posts.sort('date', 'desc').limit(theme.customize.post_count || 5).each(function(post, i){ %>
       <li class="post-item">
@@ -91,7 +90,7 @@
         <% } %>
     </ul>
 </section>
-
+</div>
 
 <% if (site.data.projects) { %>
 <section id="projects">
