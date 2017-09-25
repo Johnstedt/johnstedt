@@ -28,10 +28,12 @@ customize:
         url: /images/apple-touch-icon.png
         gravator: false
     social_links:
-        github:
+        
         twitter: https://twitter.com/Johnstedt
+        instagram: https://www.instagram.com/johnstedt
         youtube: https://www.youtube.com/channel/UCNHJK0z7Ru9kYsOcXDCzDTA
-        linkedin: /
+        gitlab: https://gitlab.com/playes
+        linkedin: https://www.linkedin.com/in/john-john-markstedt-0125b2137/
     post_count: 5
     highlight: rainbow
 
@@ -41,7 +43,8 @@ rss: false
 # Plugins
 plugins:
     disqus_shortname: # Disqus Comments Shortname
-    google_analytics: UA-86660611-1 # enter the tracking ID for your Google Analytics
+    google_analytics: UA-106876084-1 # enter the tracking ID for your Google Analytics
+
 
 # Miscellaneous
 miscellaneous:
