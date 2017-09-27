@@ -5,6 +5,7 @@ tags:
   - Bicycle touring
 categories:
   - Experience
+date: 2017-09-27 12:07:00  
 ---
 	
 ![dresden](/../images/Europa2016522.JPG "Dresden")
