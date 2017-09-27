@@ -1,0 +1,144 @@
+<html>
+<style>
+.content {
+	visibility: hidden;
+	
+}
+#header {
+	visibility: visible;
+}
+</style>
+<p style="position: relative; top: -150px; width: 400; margin-right: auto; margin-left: auto" >
+
+this is text, where do it wrap sdfkls dsfsdfsdfsdfsd sdf sdf sdfsdfsdfsdfsdfs sdfsdfsdfsd sdfsdfsdf ssdfsdfs sdfsdfsdf sdfsdfsf
+</p>
+
+<table border="1" id="myTable" style="position: relative; margin-left: auto; margin-right: auto; top: -150px;">  
+  <tr>
+   <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->  
+    <th onclick="sortTable(0)">Rank</th>
+    <th onclick="sortTable(1)">Name</th>
+    <th onclick="sortTable(2)">Author</th>
+    <th onclick="sortTable(3)">Category</th>
+    <th onclick="sortTable(4)">Pages</th>
+</tr>
+<tr>
+	<td>01</td><td>Born to Run </td><td>Christopher McDougall </td><td>NonFiction, Health </td><td> 304 </td>
+</tr>
+<tr>
+	<td>02</td><td>The Unbearable Lightness of Being </td><td>Milan Kundera </td><td>Fiction </td><td> 311 </td>
+</tr>
+<tr>
+	<td>03</td><td>The Last Lecture </td><td>Randy Pausch </td><td>Biografy </td><td> 228 </td>
+</tr>
+<tr>
+	<td>04</td><td>Ninteen-Eightyfour </td><td>George Orwell </td><td>Satire </td><td> 416 </td>
+</tr>
+<tr>
+	<td>05</td><td>The Selfish Gene</td><td>Richard Dawkins</td><td>Evolutionary Biology </td><td> 366 </td>
+</tr>
+<tr>
+	<td>06</td><td>Animal Farm </td><td>George Orwell </td><td>Satire </td><td> 122 </td>
+</tr>
+<tr>
+	<td>07</td><td>Sex at Dawn </td><td>Christopher Ryan</td><td>Evolutionary Biology </td><td> 400 </td>
+</tr>
+<tr>
+	<td>08</td><td>The Paleo Manifesto</td><td>John Durant</td><td>Health </td><td> 256 </td>
+</tr>
+<tr>
+	<td>09</td><td>Unshakeable </td><td>Tony Robbins </td><td>Economy </td><td> 231 </td>
+</tr>
+<tr>
+	<td>10</td><td>The Bonobo and The Atheist </td><td>Frans De Wall </td><td>Primatology, EB </td><td> 320 </td>
+</tr>
+<tr>
+	<td>11</td><td>Thunder & Sunshine </td><td>Alastair Humphreys </td><td>Adventure </td><td> 350 </td>
+</tr>
+<tr>
+	<td>12</td><td>Elon Musk: Inventing the Future </td><td>Ashlee Vance </td><td>Biografy </td><td> 392 </td>
+</tr>
+<tr>
+	<td>13</td><td>Moods of Future Joys </td><td>Alastair Humphreys </td><td>Adventure </td><td> 198 </td>
+</tr>
+<tr>
+	<td>14</td><td>Primal Endurance </td><td>Mark Sission </td><td>Health </td><td> 380 </td>
+</tr>
+<tr>
+	<td>15</td><td>The Hitchhiker’s Guide to the Galaxy </td><td>Douglas Adams </td><td>Fiction </td><td> 193 </td>
+</tr>
+<tr>
+  	<td>16</td><td>The Thank You Economy </td><td>Gary Vaynerchuk </td><td>Marketing, Economy</td><td> 256 </td>
+</tr>
+<tr>
+	<td>17</td><td>The 1-Page Marketing plan </td><td>Alan Dib </td><td>Marketing </td><td> 213 </td>
+</tr>
+<tr>
+	<td>18</td><td>Some Thoughts on the Common Toad </td><td>George Orwell </td><td>Nonfiction </td><td> 115 </td>
+</tr>
+<tr>
+	<td>19</td><td>The Primal Connection </td><td>Mark Sission </td><td>Health, Evolutionary Biology </td><td> 300 </td>
+</tr>
+
+
+</table>
+
+<script>
+
+function sortTable(n) {
+  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+  table = document.getElementById("myTable");
+  switching = true;
+  //Set the sorting direction to ascending:
+  dir = "asc"; 
+  /*Make a loop that will continue until
+  no switching has been done:*/
+  while (switching) {
+    //start by saying: no switching is done:
+    switching = false;
+    rows = table.getElementsByTagName("TR");
+    /*Loop through all table rows (except the
+    first, which contains table headers):*/
+    for (i = 1; i < (rows.length - 1); i++) {
+      //start by saying there should be no switching:
+      shouldSwitch = false;
+      /*Get the two elements you want to compare,
+      one from current row and one from the next:*/
+      x = rows[i].getElementsByTagName("TD")[n];
+      y = rows[i + 1].getElementsByTagName("TD")[n];
+      /*check if the two rows should switch place,
+      based on the direction, asc or desc:*/
+      if (dir == "asc") {
+        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+          //if so, mark as a switch and break the loop:
+          shouldSwitch= true;
+          break;
+        }
+      } else if (dir == "desc") {
+        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+          //if so, mark as a switch and break the loop:
+          shouldSwitch= true;
+          break;
+        }
+      }
+    }
+    if (shouldSwitch) {
+      /*If a switch has been marked, make the switch
+      and mark that a switch has been done:*/
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+      //Each time a switch is done, increase this count by 1:
+      switchcount ++;      
+    } else {
+      /*If no switching has been done AND the direction is "asc",
+      set the direction to "desc" and run the while loop again.*/
+      if (switchcount == 0 && dir == "asc") {
+        dir = "desc";
+        switching = true;
+      }
+    }
+  }
+}
+</script>
+</html>
+

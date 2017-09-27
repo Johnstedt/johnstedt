@@ -1,14 +1,17 @@
 ---
-title: Cycling through Europe
+title: Cycling across Europe
 tags:
   - Travel
   - Bicycle touring
 categories:
-  - Travel
+  - Experience
 ---
 	
 ![dresden](/../images/Europa2016522.JPG "Dresden")
 	*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; In front of the Dresden Cathedral in Dresden, Germany.*
+
+![dresden](/../images/map.png "Dresden")
+	*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Stockholm - Rome.*
 
 
 {% blockquote Helen Keller%}
@@ -19,7 +22,7 @@ categories:
 
 # The Decision of Indecision
 
-I kept having these nightmares, or others might call them just dreams because there was nothing inherently scary with them. In the dream I would wake up, being ten years older than I am now. I would eat my breakfast and go to a stable high paying engineering job. It might not sound like a nightmare but it left me terrified. I assume it symbolize a soul stuck in the hamster wheel, to comfortable to break free. Every day working myself closer to the grave, becoming more and more atrophied in mind and body every day. The dream showed me a life of lightness, a comfortable, easy but depressingly boring life.  
+I kept having these nightmares, or others might call them just dreams because there was nothing inherently scary with them. In the dream I would wake up, being ten years older than I am now. I would eat my breakfast and go to a stable high paying engineering job. It might not sound like a nightmare but it left me terrified. I assume it symbolize a soul stuck in the hamster wheel, too comfortable to break free. Every day working myself closer to the grave, becoming more and more atrophied in mind and body every day. The dream showed me a life of lightness, a comfortable, easy but depressingly boring life.  
 
 I never told anyone before, but that was the reason I packed my bicycle to cycle across Europe. The 3500km journey that would eventually end by dragging my bike into the Mediterranean. And I would do it alone. I chose to add the burden of the journey to my life to try to make it meaningful. To make it heavy.
 

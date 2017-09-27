@@ -3,6 +3,7 @@ nav:
   Archive: /archives/
   Category: /categories/
   About: /about/
+  #Resources: /resources/
 
 
 projects_url: http://github.com/probberechts
@@ -28,7 +29,7 @@ customize:
         url: /images/apple-touch-icon.png
         gravator: false
     social_links:
-        
+
         twitter: https://twitter.com/Johnstedt
         instagram: https://www.instagram.com/johnstedt
         youtube: https://www.youtube.com/channel/UCNHJK0z7Ru9kYsOcXDCzDTA
