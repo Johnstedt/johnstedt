@@ -13,6 +13,11 @@
 this is text, where do it wrap sdfkls dsfsdfsdfsdfsd sdf sdf sdfsdfsdfsdfsdfs sdfsdfsdfsd sdfsdfsdf ssdfsdfs sdfsdfsdf sdfsdfsf
 </p>
 
+<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+
 <table border="1" id="myTable" style="position: relative; margin-left: auto; margin-right: auto; top: -150px;">  
   <tr>
    <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->  
@@ -44,40 +49,52 @@ this is text, where do it wrap sdfkls dsfsdfsdfsdfsd sdf sdf sdfsdfsdfsdfsdfs sd
 	<td>07</td><td>Sex at Dawn </td><td>Christopher Ryan</td><td>Evolutionary Biology </td><td> 400 </td>
 </tr>
 <tr>
-	<td>08</td><td>The Paleo Manifesto</td><td>John Durant</td><td>Health </td><td> 256 </td>
+  <td>07</td><td>The Elon Musk Blog Series</td><td>Tim Urban</td><td>Biografy </td><td> 549 </td>
 </tr>
 <tr>
-	<td>09</td><td>Unshakeable </td><td>Tony Robbins </td><td>Economy </td><td> 231 </td>
+	<td>09</td><td>The Paleo Manifesto</td><td>John Durant</td><td>Health </td><td> 256 </td>
 </tr>
 <tr>
-	<td>10</td><td>The Bonobo and The Atheist </td><td>Frans De Wall </td><td>Primatology, EB </td><td> 320 </td>
+  <td>07</td><td>Good to Great</td><td>Jim Collins</td><td>Business </td><td> 299 </td>
 </tr>
 <tr>
-	<td>11</td><td>Thunder & Sunshine </td><td>Alastair Humphreys </td><td>Adventure </td><td> 350 </td>
+	<td>10</td><td>Unshakeable </td><td>Tony Robbins </td><td>Economy </td><td> 231 </td>
 </tr>
 <tr>
-	<td>12</td><td>Elon Musk: Inventing the Future </td><td>Ashlee Vance </td><td>Biografy </td><td> 392 </td>
+  <td>08</td><td>The Lean Startup</td><td>Eric Ries</td><td>Business </td><td> 280 </td>
 </tr>
 <tr>
-	<td>13</td><td>Moods of Future Joys </td><td>Alastair Humphreys </td><td>Adventure </td><td> 198 </td>
+	<td>11</td><td>The Bonobo and The Atheist </td><td>Frans De Wall </td><td>Primatology, EB </td><td> 320 </td>
 </tr>
 <tr>
-	<td>14</td><td>Primal Endurance </td><td>Mark Sission </td><td>Health </td><td> 380 </td>
+	<td>12</td><td>Thunder & Sunshine </td><td>Alastair Humphreys </td><td>Adventure </td><td> 350 </td>
 </tr>
 <tr>
-	<td>15</td><td>The Hitchhiker’s Guide to the Galaxy </td><td>Douglas Adams </td><td>Fiction </td><td> 193 </td>
+	<td>13</td><td>Elon Musk: Inventing the Future </td><td>Ashlee Vance </td><td>Biografy </td><td> 392 </td>
 </tr>
 <tr>
-  	<td>16</td><td>The Thank You Economy </td><td>Gary Vaynerchuk </td><td>Marketing, Economy</td><td> 256 </td>
+	<td>14</td><td>Moods of Future Joys </td><td>Alastair Humphreys </td><td>Adventure </td><td> 198 </td>
 </tr>
 <tr>
-	<td>17</td><td>The 1-Page Marketing plan </td><td>Alan Dib </td><td>Marketing </td><td> 213 </td>
+  <td>14</td><td>The Munk Who Sold His Ferrari </td><td>Robin Sharma </td><td>Health </td><td> 224 </td>
+</tr> 
+<tr>
+	<td>15</td><td>Primal Endurance </td><td>Mark Sission </td><td>Health </td><td> 380 </td>
 </tr>
 <tr>
-	<td>18</td><td>Some Thoughts on the Common Toad </td><td>George Orwell </td><td>Nonfiction </td><td> 115 </td>
+	<td>16</td><td>The Hitchhiker’s Guide to the Galaxy </td><td>Douglas Adams </td><td>Fiction </td><td> 193 </td>
 </tr>
 <tr>
-	<td>19</td><td>The Primal Connection </td><td>Mark Sission </td><td>Health, Evolutionary Biology </td><td> 300 </td>
+  	<td>17</td><td>The Thank You Economy </td><td>Gary Vaynerchuk </td><td>Marketing, Economy</td><td> 256 </td>
+</tr>
+<tr>
+	<td>18</td><td>The 1-Page Marketing plan </td><td>Alan Dib </td><td>Marketing </td><td> 213 </td>
+</tr>
+<tr>
+	<td></td><td>Some Thoughts on the Common Toad </td><td>George Orwell </td><td>Nonfiction </td><td> 115 </td>
+</tr>
+<tr>
+	<td>20</td><td>The Primal Connection </td><td>Mark Sission </td><td>Health, Evolutionary Biology </td><td> 300 </td>
 </tr>
 
 
@@ -85,7 +102,21 @@ this is text, where do it wrap sdfkls dsfsdfsdfsdfsd sdf sdf sdfsdfsdfsdfsdfs sd
 
 <script>
 
+$( document ).ready(function(){
+ 
+let tablez = document.getElementById("myTable")
+  let columns = tablez.getElementsByTagName("TR");
+  for(let i = 1; i < columns.length; i++) {
+    console.log(columns[i].getElementsByTagName("TD"));
+    columns[i].getElementsByTagName("TD")[0].innerHTML = i ;
+  }
+});
+
 function sortTable(n) {
+
+ 
+  
+
   var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
   table = document.getElementById("myTable");
   switching = true;
