@@ -4,7 +4,7 @@ tags:
   - Travel
   - Bicycle touring
 categories:
-  - Experience
+  - Travel
 date: 2017-09-27 12:07:00  
 ---
 	
